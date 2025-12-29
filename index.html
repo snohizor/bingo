@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bingo – Sélection des Tableaux</title>
+
+<style>
+    *{
+        box-sizing:border-box;
+        margin:0;
+        padding:0;
+    }
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #0d1117, #1f2937);
+        min-height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        color:white;
+    }
+
+    .container{
+        width:100%;
+        max-width:800px;
+        padding:20px;
+        text-align:center;
+    }
+
+    h1{
+        margin-bottom:25px;
+        font-size:28px;
+        letter-spacing:1px;
+    }
+
+    .grid{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+    a{
+        text-decoration:none;
+        color:white;
+        padding:25px 10px;
+        border-radius:12px;
+        font-size:1.2em;
+        font-weight:bold;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transition:0.25s;
+    }
+
+    .t1{ background:#1c7a2d; }
+    .t1:hover{ background:#3ad464; }
+
+    .t2{ background:#1e4e8c; }
+    .t2:hover{ background:#7fb5ff; color:#061a33; }
+
+    .t3{ background:#b8a116; color:#111;}
+    .t3:hover{ background:#ffef88; color:#3b3200; }
+
+    .t4{ background:#a22020; }
+    .t4:hover{ background:#ff8d8d; color:#300000;}
+
+    footer{
+        margin-top:25px;
+        opacity:0.8;
+        font-size:0.9em;
+    }
+
+    @media(max-width:700px){
+        .grid{
+            grid-template-columns:1fr;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Bingonoel</h1>
+
+    <div class="grid">
+        <a href="table1.html" class="t1">Tableau 1 – Vert</a>
+        <a href="table2.html" class="t2">Tableau 2 – Bleu</a>
+        <a href="table3.html" class="t3">Tableau 3 – Jaune</a>
+        <a href="table4.html" class="t4">Tableau 4 – Rouge</a>
+    </div>
+
+    <footer>
+        Made with ❤️
+    </footer>
+</div>
+
+</body>
+</html>
