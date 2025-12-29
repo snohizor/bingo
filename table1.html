@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tableau 1</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#0c2f16;
+        margin:0;
+        padding:20px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .board{
+        width:100%;
+        max-width:700px;
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        gap:4px;
+    }
+
+    .cell{
+        background:#1c7a2d;
+        color:white;
+        border-radius:6px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        padding:8px;
+        font-size:0.9em;
+        cursor:pointer;
+        transition:0.2s;
+        aspect-ratio:1/1;
+        user-select:none;
+    }
+
+    .cell.clicked{
+        background:#6fe48b;
+        color:#09350f;
+        font-weight:bold;
+    }
+
+    .title{
+        position:absolute;
+        top:10px;
+        left:50%;
+        transform:translateX(-50%);
+        color:white;
+        font-size:20px;
+        font-weight:bold;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="title">Tableau 1</div>
+
+<div class="board">
+    <div class="cell">I already said I don't like that part</div>
+    <div class="cell">We're not a boys band</div>
+    <div class="cell">The "between" in the last chorus is off</div>
+    <div class="cell">Autotune</div>
+
+    <div class="cell">It's too repetitive</div>
+    <div class="cell">I don't like it</div>
+    <div class="cell">What are we gonna do on stage for this part</div>
+    <div class="cell">I'm out of this band</div>
+
+    <div class="cell">The only riff I like is my riff</div>
+    <div class="cell">It's over produced</div>
+    <div class="cell">We need a key player</div>
+    <div class="cell">Naaaah</div>
+
+    <div class="cell">I don't like the scale change</div>
+    <div class="cell">Why didn't you call me to work on it</div>
+    <div class="cell">Writting lyrics for the wrong song</div>
+    <div class="cell">It's gay</div>
+</div>
+
+<script>
+    document.querySelectorAll(".cell").forEach(cell=>{
+        cell.addEventListener("click", ()=>{
+            cell.classList.toggle("clicked");
+        });
+    });
+</script>
+
+</body>
+</html>
